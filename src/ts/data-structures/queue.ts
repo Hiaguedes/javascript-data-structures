@@ -55,4 +55,8 @@ export default class Queue<T> {
     }
     return objString;
   }
+
+  values() {
+    return Object.values(this.items)
+  }
 }

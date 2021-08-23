@@ -38,9 +38,6 @@ export default class Stack<T> {
   }
 
   clear() {
-    /* while (!this.isEmpty()) {
-      this.pop();
-    } */
 
     this.items = {};
     this.count = 0;
@@ -55,5 +52,9 @@ export default class Stack<T> {
       objString = `${objString},${this.items[i]}`;
     }
     return objString;
+  }
+
+  values() {
+    return this.isEmpty() ? undefined : Object.values(this.items);
   }
 }
